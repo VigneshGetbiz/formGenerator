@@ -7,12 +7,24 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { CommonModule } from './shared/modules/common.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TextFieldComponent } from './formControls/text-field/text-field.component';
+import { CheckBoxComponent } from './formControls/check-box/check-box.component';
+import { RadioComponent } from './formControls/radio/radio.component';
+import { SelectComponent } from './formControls/select/select.component';
+import { DateComponent } from './formControls/date/date.component';
+import { EmailComponent } from './formControls/email/email.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    TextFieldComponent,
+    CheckBoxComponent,
+    RadioComponent,
+    SelectComponent,
+    DateComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +32,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormlyModule,
     FormlyMaterialModule,
     FormlyModule.forRoot({
+      types: [
+        { name: 'repeat', component: TextFieldComponent },
+      ],
       // validationMessages: [
       //   { name: 'required', message: 'This field is required' },
       // ],

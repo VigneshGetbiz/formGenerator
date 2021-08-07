@@ -36,7 +36,12 @@
 						<mat-card-title>Controls</mat-card-title>
 						<!-- <mat-card-subtitle></mat-card-subtitle> --></mat-card-header>
 					<mat-card-content>
-						<div> </div>
+						<div>
+							<form [formGroup]="form" (ngSubmit)="submit()">
+								<formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+								<button type="submit" class="btn btn-primary submit-button" [disabled]="!form.valid">Submit</button>
+							  </form>	
+						</div>
 					</mat-card-content>
 				</mat-card>
 			</div>

@@ -27,7 +27,6 @@ export class DynamicFormComponent implements OnInit {
       fieldArray: {
         fieldGroup: [
           {
-            // className: 'col-sm-4',
             type: 'input',
             key: 'investmentName',
             templateOptions: {
